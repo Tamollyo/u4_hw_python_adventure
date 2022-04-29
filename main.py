@@ -29,7 +29,7 @@ def adventure():
                             adventure()
                         else:
                             print("End Game")
-                elif (len(meal) > 5):
+                else:
                     food = input("EWWW, why would you cook " + meal)
                     end = input(
                         "You died from that horrible " + meal + " would you like to restart? Y/N")
@@ -162,42 +162,43 @@ def adventure():
 
         else:
             choice3 = input("Spicy choice! " + location +
-                            "has great squirrels. What activity do you like to do there?")
+                            "has great squirrels. Do you like their wild grasses?")
             if choice3 == "Y":
-                meal = input(
-                    "Wonderful! It's around time for dinner, what are you cooking?")
-                if (len(meal) < 5):
-                    food = input("EWWW, why would you cook " +
-                                 meal + "Do you regret that decision? Y/N")
-                    if food == "Y":
+                act = input(
+                    "Wonderful! I've always wanted to go on an adventure with you " + name + "what should we do?")
+                if (len(act) < 12):
+                    dec = input("Sounds like fun to " +
+                                act + " .Too bad I can only hulahoop. Do you regret that decision? Y/N")
+                    if dec == "Y":
                         end = input(
-                            "TOO BAD, the " + meal + "killed you. Would you like to restart? Y/N")
+                            "TOO BAD, the " + act + "killed you. Would you like to restart? Y/N")
                         if end == "Y":
                             adventure()
                         else:
                             print("End Game")
                     else:
                         end = input(
-                            "WOWZA, the " + meal + "killed you. Would you like to restart? Y/N")
+                            "WOWZA, the " + act + "killed you. Would you like to restart? Y/N")
                         if end == "Y":
                             adventure()
                         else:
                             print("End Game")
-                elif (len(meal) > 5):
-                    food = input("EWWW, why would you cook " + meal)
+                elif (len(act) > 5):
+                    dec = input("EWWW, why would want to do " +
+                                act + "time to continue... I guess. Type Y")
                     end = input(
-                        "You died from that horrible " + meal + " would you like to restart? Y/N")
+                        "You died from that horrible " + act + " would you like to restart? Y/N")
                     if end == "Y":
                         adventure()
                     else:
                         print("End Game")
             else:
                 new_place = input(
-                    "Bummer! What kind of lodging do you prefer? ex: hotel, lodge, hostel")
-                if (len(new_place) < 4):
+                    "Bummer! Who does not like wild grasses, what would you like to do?")
+                if (len(new_place) < 9):
                     lodging = input(
-                        new_place + "is a great choice! How long will you be staying?")
-                    if (int(lodging) < 10):
+                        new_place + "is a great choice! How long will will it take?")
+                    if (int(lodging) <= 9):
                         end = input(
                             lodging + " is such a short amount of time would you like to restart? Y/N")
                         if end == "Y":
@@ -206,15 +207,15 @@ def adventure():
                             print("End Game")
                     else:
                         end = input(
-                            lodging + " is such a weird amount of time would you like to restart? Y/N")
+                            lodging + " is waayaaaayya too long like to restart? Y/N")
                         if end == "Y":
                             adventure()
                         else:
                             print("End Game")
                 elif (len(new_place) >= 4 and len(new_place) < 8):
                     lodging_two = input(
-                        new_place + "is a great choice!  How long will you be staying?")
-                    print("Wow"+lodging_two+" is a long time, have a great stay!")
+                        new_place + "is a great choice!  Oh nooo thre are tolls?")
+                    print("Wow"+lodging_two+" that was a quick death!")
                     end = input(
                         "This is the end of our adventure, would you like to restart? Y/N")
                     if end == "Y":
@@ -223,17 +224,17 @@ def adventure():
                         print("End Game")
                 else:
                     lodging_three = input(
-                        new_place + " is a great choice! How long will you be staying?")
+                        new_place + " is a great choice! We'll need a unicorn, how many do you have?")
                     if (int(lodging_three) < 6):
                         end = input(
-                            "What the heck, the place has termites, do you want to leave? Y/N")
+                            "What the heck, the unicorns have turned on you, do you want to leave? Y/N")
                         if end == "Y":
                             adventure()
                         else:
                             print("End Game")
                     else:
                         end = input(
-                            "What the heck, bed bugs much? I guess it's time to end the adventure, do you want to restart? Y/N")
+                            "What the heck, looks like the unicorns were distracted by the wild grasses, do you want to restart? Y/N")
                         if end == "Y":
                             adventure()
                         else:
